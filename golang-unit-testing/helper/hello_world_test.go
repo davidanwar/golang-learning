@@ -7,6 +7,18 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+func BenchmarkHelloDavid(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		HelloWorld("David Anwar")
+	}
+}
+
+func BenchmarkHelloFatih(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		HelloWorld("David Anwar Ginanjar")
+	}
+}
+
 func TestMain(m *testing.M) {
 	fmt.Println("Before Unit Test")
 	m.Run()
